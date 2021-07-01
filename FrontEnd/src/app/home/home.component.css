@@ -1,0 +1,127 @@
+.title {
+  background-color: #333;
+  padding: 2.5rem 2.5rem;
+  text-align: center;
+  border-bottom: solid gray 0.5rem;
+}
+
+.container {
+  color: white;
+}
+
+.title .container h1 {
+  font-weight: 500;
+  font-size: 64px;
+}
+
+.menu {
+  text-align: center;
+}
+
+.menu select {
+  font-size: x-large;
+  margin: 1.5rem;
+  font-weight: 500;
+  width: 50%;
+}
+
+.quantity {
+  margin: 1.5rem;
+  font-size: x-large;
+}
+
+.menu option{
+  margin: 1rem;
+}
+
+.menu label {
+  text-transform: uppercase;
+  font-size: xx-large;
+}
+
+.menu button {
+  font-size: x-large;
+  padding: 0.1rem 1.5rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: #333;
+  border-radius: 0.5rem;
+}
+
+table.mat-table {
+  width: 100%;
+}
+
+.btns button {
+  margin: 1% 1%;
+  border-radius: 0.5rem;
+  width: 20%;
+}
+
+.total {
+  padding: 2% 2%;
+  text-align: right;
+  font-size: 32px;
+  color: #333;
+  margin-right: 5rem;
+}
+
+.no-table {
+  font-size: x-large;
+  text-align: center;
+  padding: 1% 0%;
+  margin: 0% 0%;
+  background-color: white;
+  color: #333;
+  font-weight: 400;
+  /* border-bottom: solid gray 0.5rem; */
+}
+
+.details {
+  display: flex;
+  /* justify-content: center; */
+  background-color: #f1f1f1;
+  padding: 1rem 0rem;
+  justify-content: space-evenly;
+}
+
+.ip textarea,
+.ip input {
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 0.3rem 0rem;
+  border: none;
+  outline: 0;
+}
+
+.ip {
+  background-color: #f1f1f1;
+  padding: 1rem 3rem;
+  margin-right: 1rem;
+}
+
+.is-bold {
+  font-weight: 600;
+}
+
+textarea {
+  resize: none;
+}
+
+.mat-table {
+  background: #fafafa;
+  /* box-shadow: none; */
+  width: 90% !important;
+  margin-left: 5%;
+}
+
+.mat-table th {
+  background-color: #575757;
+  font-size: large;
+  color: white;
+}
+
+.mat-table th,
+.mat-table td {
+  text-align: center;
+}

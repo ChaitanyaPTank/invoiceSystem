@@ -1,0 +1,16 @@
+<label for="name">Name: </label>
+<input type="text" [(ngModel)]='name' />
+<br>
+<br>
+<label for="price">Price: </label>
+<input type="text" [(ngModel)]='price' />
+<br>
+<br>
+<label for="cat">Category: </label>
+<select name="category" id="category" [(ngModel)]="category">
+  <option [value]="" selected>Select Category</option>
+  <option [value]="cat._id" *ngFor="let cat of categories">{{ cat.name }}</option>
+</select>
+<br>
+<br>
+<button (click)="sendResponse()">Submit</button>

@@ -1,0 +1,12 @@
+<label for="name">Name: </label>
+<input type="text" [(ngModel)]='name' />
+<br>
+<br>
+<label for="tax">Tax: </label>
+<select name="tax" id="tax" [(ngModel)]="tax">
+  <option [value]="" selected>Select Tax</option>
+  <option [value]="t._id" *ngFor="let t of taxes">{{ t.percentage }}</option>
+</select>
+<br>
+<br>
+<button (click)="sendResponse()">Submit</button>

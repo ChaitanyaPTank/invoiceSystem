@@ -1,0 +1,109 @@
+<div class="title">
+  <div class="container">
+    <h1>Web Refine Technology</h1>
+  </div>
+</div>
+
+<!-- <div class="container">
+  <div class="tab">
+
+  </div>
+</div> -->
+
+<div #canvas id="i-canvas">
+  <div class="details">
+    <!-- <div class="customer"> -->
+    <div class="ip">
+      <h1>Billed By: </h1>
+      <input type="text" class="is-bold" value="Web Refine Technology LLP">
+      <textarea name="address" id="address" cols="30" rows="5">
+Baroda, Gujarat, India,
+Email: webrefinetechnology@gmail.com,
+Phone: 7874407474
+    </textarea>
+    </div>
+
+    <div class="qr">
+      <img [src]="qr" alt="">
+    </div>
+
+    <div class="ip">
+      <h1>Billed To: </h1>
+      <input type="text" class="is-bold" placeholder="please enter name of customer" [(ngModel)]="customerName">
+      <textarea name="address" id="address" cols="30" rows="5" placeholder="Address and other info here"></textarea>
+    </div>
+    <!-- </div> -->
+  </div>
+
+  <div class="no-table">
+    <p>Please add an Item to Generate Invoice</p>
+  </div>
+
+  <div class="gray">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="tableData.length">
+
+      <ng-container matColumnDef="No">
+        <th mat-header-cell *matHeaderCellDef>No</th>
+        <td mat-cell *matCellDef="let element">{{element.no}}</td>
+      </ng-container>
+      <!-- Position Column -->
+      <ng-container matColumnDef="Product">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="Price">
+        <th mat-header-cell *matHeaderCellDef>Price</th>
+        <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Quantity">
+        <th mat-header-cell *matHeaderCellDef>Quantity</th>
+        <td mat-cell *matCellDef="let element"> {{ element.quantity }} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="Tax">
+        <th mat-header-cell *matHeaderCellDef>Tax (per unit)</th>
+        <td mat-cell *matCellDef="let element"> {{element.tax}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="Total">
+        <th mat-header-cell *matHeaderCellDef>Total</th>
+        <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
+    </table>
+    <div class="total">
+      <p>Total: {{ grandTotal }} </p>
+    </div>
+      <!-- <div class="qr">
+      <img [src]="qr" alt="">
+    </div> -->
+  </div>
+</div>
+
+<div class="menu">
+  <label for="items">Item: </label>
+  <select name="products" id="products" [(ngModel)]="selectedItem">
+    <option value="null" [selected]="!selectedItem">Select Item</option>
+    <option [value]="item._id" *ngFor="let item of products">{{ item.name }}</option>
+  </select>
+  <label for="quantity">Quantity</label>
+  <input type="number" class="quantity" min="1" value="1" [(ngModel)]="quantity">
+  <div class="btns">
+    <button (click)="submitButton()">Add To List</button>
+    <button (click)="del()">Delete</button>
+    <button (click)="invoice()">Generate Invoice</button>
+    <button (click)="convertToPDF()">PDF</button>
+  </div>
+</div>
+<!-- <div class="total">
+  <p>
+    TOTAL : {{ grandTotal }}
+  </p>
+</div> -->
